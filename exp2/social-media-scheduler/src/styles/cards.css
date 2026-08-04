@@ -1,0 +1,87 @@
+/* ==========================================================
+   CARDS
+========================================================== */
+
+.card {
+    position: relative;
+    overflow: hidden;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+
+    padding: var(--space-6);
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        background var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition),
+        transform var(--transition);
+}
+
+/* subtle top highlight */
+.card::before {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.45);
+
+    opacity: 0.55;
+    pointer-events: none;
+}
+
+[data-theme="dark"] .card::before {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.card:hover {
+    background: var(--surface-hover);
+
+    border-color: rgba(37, 99, 235, 0.22);
+
+    box-shadow: var(--shadow-md);
+
+    transform: translateY(-3px);
+}
+
+.card h2 {
+    font-size: 1.08rem;
+
+    font-weight: 700;
+
+    letter-spacing: -0.02em;
+
+    margin-bottom: 18px;
+
+    color: var(--text);
+}
+
+.card p {
+    color: var(--text-light);
+
+    line-height: 1.55;
+}
+
+/* interactive cards only */
+
+.card.clickable {
+    cursor: pointer;
+}
+
+/* section divider */
+
+.card hr {
+    border: none;
+
+    border-top: 1px solid var(--border);
+
+    margin: 18px 0;
+}

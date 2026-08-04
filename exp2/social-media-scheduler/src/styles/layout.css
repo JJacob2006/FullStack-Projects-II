@@ -1,0 +1,159 @@
+/* ==========================================================
+   LAYOUT
+========================================================== */
+
+.dashboard {
+    width: min(1840px, calc(100% - 48px));
+
+    margin-inline: auto;
+    padding-block: 24px 40px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-body {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.dashboard-section {
+    width: 100%;
+}
+
+.stats-panel,
+.toolbar-panel,
+.workspace-grid,
+.posts-grid {
+    min-width: 0;
+}
+
+/* ==========================================================
+   WORKSPACE
+========================================================== */
+
+.workspace-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.55fr)
+        minmax(360px, 0.82fr);
+
+    gap: 28px;
+
+    align-items: start;
+}
+
+.workspace-main {
+    min-width: 0;
+}
+
+.workspace-sidebar {
+    display: flex;
+    flex-direction: column;
+
+    gap: 28px;
+
+    position: sticky;
+    top: 24px;
+
+    align-self: start;
+}
+
+/* ==========================================================
+   POSTS
+========================================================== */
+
+.posts-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 28px;
+
+    align-items: start;
+}
+
+/* ==========================================================
+   LARGE DESKTOP
+========================================================== */
+
+@media (min-width: 1600px) {
+    .dashboard {
+        width: min(1920px, calc(100% - 64px));
+    }
+}
+
+/* ==========================================================
+   DESKTOP
+========================================================== */
+
+@media (max-width: 1400px) {
+    .workspace-grid {
+        grid-template-columns:
+            minmax(0, 1.4fr)
+            minmax(330px, 0.9fr);
+    }
+}
+
+/* ==========================================================
+   LAPTOP
+========================================================== */
+
+@media (max-width: 1200px) {
+    .dashboard-body {
+        gap: 24px;
+    }
+
+    .workspace-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .workspace-sidebar {
+        position: static;
+    }
+
+    .posts-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 820px) {
+    .dashboard {
+        width: calc(100% - 24px);
+
+        padding-block: 18px 28px;
+    }
+
+    .dashboard-body {
+        gap: 20px;
+    }
+
+    .workspace-grid,
+    .posts-grid {
+        gap: 20px;
+    }
+
+    .workspace-sidebar {
+        gap: 20px;
+    }
+
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 520px) {
+    .dashboard {
+        width: calc(100% - 18px);
+    }
+}

@@ -1,0 +1,366 @@
+/* ==========================================================
+   FORMS
+========================================================== */
+
+label {
+    display: block;
+    margin-bottom: 0.55rem;
+
+    font-size: 0.88rem;
+    font-weight: 600;
+
+    color: var(--text-secondary);
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    font-size: 0.95rem;
+
+    color: var(--text-primary);
+
+    background: var(--background-secondary);
+
+    border: 1px solid transparent;
+    border-radius: 14px;
+
+    padding: 0.9rem 1rem;
+
+    transition: all 0.25s ease;
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+    background: var(--surface);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+
+    background: var(--surface);
+
+    border-color: #3b82f6;
+
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.08);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 180px;
+}
+
+/* ==========================================================
+   CREATE POST
+========================================================== */
+
+.composer-card {
+    background: var(--surface);
+
+    border: 1px solid var(--border-color);
+    border-radius: 22px;
+
+    padding: 1.75rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.composer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.composer-title {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.composer-icon {
+    width: 56px;
+    height: 56px;
+
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(59, 130, 246, 0.08);
+    color: #3b82f6;
+
+    flex-shrink: 0;
+}
+
+.composer-title h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.35rem;
+}
+
+.composer-title p {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+}
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.composer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.55rem;
+}
+
+/* ==========================================================
+   SELECT
+========================================================== */
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper select {
+    appearance: none;
+    cursor: pointer;
+    padding-right: 3rem;
+}
+
+.select-wrapper svg {
+    position: absolute;
+
+    right: 1rem;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--text-secondary);
+
+    pointer-events: none;
+}
+
+/* ==========================================================
+   DATE
+========================================================== */
+
+.date-input {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    background: var(--background-secondary);
+
+    border: 1px solid transparent;
+    border-radius: 14px;
+
+    padding: 0 1rem;
+
+    transition: 0.25s;
+}
+
+.date-input:focus-within {
+    border-color: #3b82f6;
+    background: var(--surface);
+
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.08);
+}
+
+.date-input svg {
+    color: var(--text-secondary);
+}
+
+.date-input input {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+/* ==========================================================
+   TEXTAREA
+========================================================== */
+
+.textarea-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 0.6rem;
+}
+
+.character-pill {
+    padding: 0.35rem 0.8rem;
+
+    border-radius: 999px;
+
+    background: rgba(59, 130, 246, 0.08);
+    color: #3b82f6;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.character-pill.danger {
+    background: rgba(239, 68, 68, 0.12);
+    color: #ef4444;
+}
+
+.progress-track {
+    margin-top: 1rem;
+
+    width: 100%;
+    height: 8px;
+
+    border-radius: 999px;
+
+    overflow: hidden;
+
+    background: var(--background-secondary);
+}
+
+.progress-fill {
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+
+    transition: width 0.25s ease;
+}
+
+.progress-fill.danger {
+    background: #ef4444;
+}
+
+.character-footer {
+    margin-top: 0.6rem;
+
+    display: flex;
+    justify-content: flex-end;
+
+    font-size: 0.82rem;
+
+    color: var(--text-secondary);
+}
+
+.field-error {
+    margin-top: 0.45rem;
+
+    color: #ef4444;
+
+    font-size: 0.82rem;
+}
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+.composer-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.draft-btn,
+.schedule-btn {
+    flex: 1;
+
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+
+    border: none;
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: 0.25s;
+}
+
+.draft-btn {
+    background: var(--background-secondary);
+    color: var(--text-primary);
+}
+
+.draft-btn:hover {
+    transform: translateY(-2px);
+}
+
+.schedule-btn {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+
+    color: white;
+}
+
+.schedule-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.25);
+}
+
+.cancel-edit-btn {
+    background: transparent;
+
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+
+    padding: 0.9rem;
+
+    cursor: pointer;
+
+    color: var(--text-secondary);
+
+    transition: 0.25s;
+}
+
+.cancel-edit-btn:hover {
+    background: var(--background-secondary);
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 900px) {
+    .composer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .composer-card {
+        padding: 1.25rem;
+    }
+
+    .composer-title {
+        align-items: flex-start;
+    }
+
+    .composer-actions {
+        flex-direction: column;
+    }
+
+    .textarea-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+    }
+}

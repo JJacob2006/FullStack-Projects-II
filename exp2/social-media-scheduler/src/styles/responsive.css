@@ -1,0 +1,198 @@
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+/* ----------------------------------------------------------
+   LARGE LAPTOPS
+---------------------------------------------------------- */
+
+@media (max-width: 1400px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* ----------------------------------------------------------
+   TABLETS
+---------------------------------------------------------- */
+
+@media (max-width: 1200px) {
+    .workspace-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .platform-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ----------------------------------------------------------
+   SMALL TABLETS
+---------------------------------------------------------- */
+
+@media (max-width: 992px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .filter-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .composer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .platform-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ----------------------------------------------------------
+   MOBILE LANDSCAPE
+---------------------------------------------------------- */
+
+@media (max-width: 768px) {
+    .dashboard {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .stats-grid,
+    .posts-grid,
+    .filter-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .header-right {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .today {
+        width: 100%;
+        text-align: center;
+    }
+
+    .post-section-header,
+    .platform-panel-top,
+    .composer-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .composer-actions,
+    .post-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .post-buttons {
+        width: 100%;
+    }
+
+    .edit-post-btn,
+    .delete-post-btn,
+    .draft-btn,
+    .schedule-btn {
+        flex: 1;
+    }
+
+    .status-select-wrapper {
+        width: 100%;
+    }
+}
+
+/* ----------------------------------------------------------
+   MOBILE
+---------------------------------------------------------- */
+
+@media (max-width: 576px) {
+    .dashboard {
+        padding: 0.75rem;
+    }
+
+    .dashboard-card,
+    .composer-card,
+    .platform-overview-card,
+    .post-section-card {
+        padding: 1.2rem;
+        border-radius: 18px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .platform-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .post-card-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .post-buttons {
+        flex-direction: column;
+    }
+
+    .header-icon,
+    .stats-icon,
+    .platform-overview-icon,
+    .post-section-icon,
+    .composer-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .dashboard-title h1,
+    .header-left h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ----------------------------------------------------------
+   SMALL PHONES
+---------------------------------------------------------- */
+
+@media (max-width: 420px) {
+    .platform-brand {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .post-platform {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .post-status {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .completion-chip {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .character-pill {
+        align-self: flex-start;
+    }
+}

@@ -1,0 +1,121 @@
+/* ==========================================================
+   VARIABLES
+========================================================== */
+
+:root {
+    /* Brand */
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --primary-light: #eff6ff;
+
+    /* Status */
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --scheduled: #7c3aed;
+
+    /* Background */
+    --background: #f4f7fb;
+    --surface: #ffffff;
+    --surface-hover: #f8fafc;
+    --surface-muted: #fbfdff;
+    --surface-elevated: #f8fbff;
+    --surface-strong: #eef4ff;
+
+    /* Header */
+    --header-bg: linear-gradient(135deg, #2563eb 0%, #3b82f6 55%, #4f8ff8 100%);
+
+    --header-chip: rgba(255, 255, 255, 0.12);
+
+    --header-chip-hover: rgba(255, 255, 255, 0.18);
+
+    --header-border: rgba(255, 255, 255, 0.12);
+
+    --header-text: #ffffff;
+
+    --header-subtext: rgba(255, 255, 255, 0.78);
+
+    /* Border */
+    --border: #e2e8f0;
+    --border-strong: #cbd5e1;
+
+    /* Typography */
+    --text: #0f172a;
+    --text-light: #64748b;
+    --font-sans: "Inter", "Segoe UI", sans-serif;
+
+    /* Radius */
+    --radius-sm: 10px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 18px;
+
+    /* Spacing */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 10px;
+    --space-4: 12px;
+    --space-5: 14px;
+    --space-6: 16px;
+    --space-7: 18px;
+
+    /* Controls */
+    --control-padding: 11px 12px;
+    --button-padding: 10px 16px;
+    --focus-ring: 0 0 0 4px rgba(37, 99, 235, 0.12);
+
+    /* Shadows */
+
+    --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.05);
+
+    --shadow-md: 0 12px 28px rgba(15, 23, 42, 0.09);
+
+    --shadow-lg: 0 22px 56px rgba(15, 23, 42, 0.14);
+
+    /* Transition */
+    --transition: 0.22s ease;
+}
+
+[data-theme="dark"] {
+    --primary: #60a5fa;
+    --primary-hover: #93c5fd;
+    --primary-light: rgba(96, 165, 250, 0.16);
+
+    --success: #4ade80;
+    --warning: #fbbf24;
+    --danger: #fb7185;
+    --scheduled: #a78bfa;
+
+    --background: #09111d;
+    --surface: #101826;
+    --surface-hover: #162235;
+    --surface-muted: #0b1322;
+    --surface-elevated: #111f35;
+    --surface-strong: #15233b;
+
+    --border: #223049;
+    --border-strong: #334155;
+
+    --text: #e8f0ff;
+    --text-light: #8ea2c5;
+
+    --shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.22);
+
+    --shadow-md: 0 14px 34px rgba(0, 0, 0, 0.32);
+
+    --shadow-lg: 0 26px 60px rgba(0, 0, 0, 0.42);
+
+    --focus-ring: 0 0 0 4px rgba(96, 165, 250, 0.24);
+
+    --header-bg: linear-gradient(135deg, #1b4fd8 0%, #2563eb 45%, #3b82f6 100%);
+
+    --header-chip: rgba(255, 255, 255, 0.08);
+
+    --header-chip-hover: rgba(255, 255, 255, 0.14);
+
+    --header-border: rgba(255, 255, 255, 0.08);
+
+    --header-text: #ffffff;
+
+    --header-subtext: rgba(255, 255, 255, 0.72);
+}

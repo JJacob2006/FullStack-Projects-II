@@ -1,0 +1,233 @@
+/* ==========================================================
+   PLATFORM OVERVIEW
+========================================================== */
+
+.platform-overview-card {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: 22px;
+    padding: 1.75rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.platform-overview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.platform-overview-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.platform-overview-icon {
+    width: 56px;
+    height: 56px;
+
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(59, 130, 246, 0.08);
+    color: #3b82f6;
+
+    flex-shrink: 0;
+}
+
+.platform-overview-title h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.platform-overview-title p {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+}
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.platform-grid {
+    display: grid;
+    gap: 1.25rem;
+}
+
+/* ==========================================================
+   PLATFORM CARD
+========================================================== */
+
+.platform-panel {
+    background: var(--background-secondary);
+
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+
+    padding: 1.25rem;
+
+    transition: 0.25s ease;
+}
+
+.platform-panel:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);
+}
+
+.platform-panel-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 1rem;
+}
+
+.platform-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.brand-icon {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(59, 130, 246, 0.08);
+    color: #3b82f6;
+}
+
+.platform-brand h3 {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.platform-brand span {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+/* ==========================================================
+   COMPLETION
+========================================================== */
+
+.completion-chip {
+    min-width: 58px;
+
+    padding: 0.45rem 0.8rem;
+
+    text-align: center;
+
+    border-radius: 999px;
+
+    background: rgba(34, 197, 94, 0.12);
+    color: #16a34a;
+
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.platform-progress {
+    width: 100%;
+    height: 8px;
+
+    margin-bottom: 1.25rem;
+
+    border-radius: 999px;
+
+    overflow: hidden;
+
+    background: rgba(148, 163, 184, 0.15);
+}
+
+.platform-progress-fill {
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+
+    transition: width 0.35s ease;
+}
+
+/* ==========================================================
+   STATS
+========================================================== */
+
+.platform-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+}
+
+.platform-stats > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.45rem;
+
+    padding: 0.9rem;
+
+    border-radius: 14px;
+
+    background: var(--surface);
+
+    transition: 0.2s;
+}
+
+.platform-stats > div:hover {
+    transform: translateY(-2px);
+}
+
+.platform-stats svg {
+    color: #3b82f6;
+}
+
+.platform-stats span {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+
+.platform-stats strong {
+    font-size: 1.15rem;
+    color: var(--text-primary);
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 700px) {
+    .platform-overview-card {
+        padding: 1.25rem;
+    }
+
+    .platform-overview-title {
+        align-items: flex-start;
+    }
+
+    .platform-panel-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .platform-stats {
+        grid-template-columns: 1fr;
+    }
+}
