@@ -1,0 +1,147 @@
+/* ==========================================================
+   GLOBAL RESET
+========================================================== */
+
+* {
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+html,
+body,
+#root {
+    width: 100%;
+
+    min-height: 100%;
+}
+
+
+/* ==========================================================
+   BODY
+========================================================== */
+
+body {
+    margin: 0;
+
+    font-family:
+        "Segoe UI",
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+
+    background: #1b201d;
+
+    color: #eee8dc;
+
+    -webkit-font-smoothing: antialiased;
+
+    text-rendering: optimizeLegibility;
+}
+
+
+/* ==========================================================
+   FORM ELEMENTS
+========================================================== */
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+/* ==========================================================
+   LINKS
+========================================================== */
+
+a {
+    text-decoration: none;
+
+    color: inherit;
+}
+
+
+/* ==========================================================
+   LISTS
+========================================================== */
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+/* ==========================================================
+   SELECTION
+========================================================== */
+
+::selection {
+    background: rgba(196, 169, 109, 0.35);
+
+    color: #fff8e9;
+}
+
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+
+    height: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #161a18;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #4e594f;
+
+    border-radius: 999px;
+
+    border: 2px solid #161a18;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #697566;
+}
+
+
+/* ==========================================================
+   INPUT PLACEHOLDERS
+========================================================== */
+
+input::placeholder,
+textarea::placeholder {
+    opacity: 1;
+}
+
+
+/* ==========================================================
+   FOCUS
+========================================================== */
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid #c4a66d;
+
+    outline-offset: 2px;
+}

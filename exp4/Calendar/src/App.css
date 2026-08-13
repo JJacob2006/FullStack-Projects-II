@@ -1,0 +1,1171 @@
+/* ==========================================================
+   VINTAGE SOCIAL MEDIA SCHEDULER
+========================================================== */
+
+/* ==========================================================
+   APP
+========================================================== */
+
+.App {
+    min-height: 100vh;
+    width: 100%;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(164, 132, 78, 0.08),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(92, 110, 91, 0.08),
+            transparent 35%
+        ),
+        #1b201d;
+
+    color: #eee8dc;
+}
+
+
+/* ==========================================================
+   HOME
+========================================================== */
+
+.home {
+    min-height: 100vh;
+
+    padding: 32px;
+
+    max-width: 1800px;
+
+    margin: 0 auto;
+}
+
+
+.home h1 {
+    text-align: center;
+
+    margin-bottom: 32px;
+
+    color: #eee8dc;
+
+    font-size: 2.35rem;
+
+    font-weight: 700;
+
+    letter-spacing: -0.02em;
+}
+
+
+/* ==========================================================
+   MAIN DASHBOARD
+========================================================== */
+
+.dashboard {
+    display: grid;
+
+    grid-template-columns: 330px minmax(0, 1fr);
+
+    gap: 28px;
+
+    align-items: start;
+}
+
+
+/* ==========================================================
+   LEFT SIDE
+========================================================== */
+
+.form-section {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    position: sticky;
+
+    top: 24px;
+}
+
+
+/* ==========================================================
+   SCHEDULE NEW POST
+========================================================== */
+
+.post-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 24px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(57, 65, 58, 0.98),
+            rgba(42, 48, 44, 0.98)
+        );
+
+    border: 1px solid rgba(205, 187, 145, 0.18);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+
+/* Decorative vintage accent */
+
+.post-form::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #b08a4a,
+            #d0b477,
+            #7c9279,
+            #b08a4a
+        );
+}
+
+
+/* Form heading */
+
+.post-form::after {
+    content: "NEW ENTRY";
+
+    position: absolute;
+
+    top: 18px;
+    right: 20px;
+
+    padding: 5px 9px;
+
+    border-radius: 999px;
+
+    background: rgba(208, 180, 119, 0.08);
+
+    border: 1px solid rgba(208, 180, 119, 0.16);
+
+    color: #cdb98d;
+
+    font-size: 0.62rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+}
+
+
+/* Inputs */
+
+.post-form input,
+.post-form textarea,
+.post-form select {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(205, 187, 145, 0.18);
+
+    background: rgba(22, 27, 24, 0.72);
+
+    color: #eee8dc;
+
+    font-size: 0.9rem;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.post-form input::placeholder,
+.post-form textarea::placeholder {
+    color: #899087;
+}
+
+
+.post-form input:hover,
+.post-form textarea:hover,
+.post-form select:hover {
+    border-color: rgba(205, 187, 145, 0.35);
+
+    background: rgba(22, 27, 24, 0.9);
+}
+
+
+.post-form input:focus,
+.post-form textarea:focus,
+.post-form select:focus {
+    border-color: #c4a96d;
+
+    background: rgba(25, 31, 27, 0.95);
+
+    box-shadow:
+        0 0 0 3px rgba(196, 169, 109, 0.12);
+}
+
+
+.post-form textarea {
+    min-height: 120px;
+
+    resize: vertical;
+
+    line-height: 1.55;
+}
+
+
+/* Select */
+
+.post-form select {
+    appearance: none;
+
+    cursor: pointer;
+
+    background-image:
+        linear-gradient(45deg, transparent 50%, #bca979 50%),
+        linear-gradient(135deg, #bca979 50%, transparent 50%);
+
+    background-position:
+        calc(100% - 16px) 50%,
+        calc(100% - 11px) 50%;
+
+    background-size:
+        5px 5px,
+        5px 5px;
+
+    background-repeat: no-repeat;
+
+    padding-right: 38px;
+}
+
+
+/* Button */
+
+.post-form button {
+    position: relative;
+
+    overflow: hidden;
+
+    margin-top: 4px;
+
+    padding: 13px 16px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #a9854c,
+            #c4a66d
+        );
+
+    color: #1b201d;
+
+    font-size: 0.92rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.01em;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.2);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+
+.post-form button:hover {
+    transform: translateY(-2px);
+
+    filter: brightness(1.06);
+
+    box-shadow:
+        0 12px 24px rgba(0, 0, 0, 0.28);
+}
+
+
+.post-form button:active {
+    transform: translateY(0);
+}
+
+
+/* ==========================================================
+   POST DETAILS
+========================================================== */
+
+.post-card {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(49, 57, 51, 0.96),
+            rgba(38, 44, 40, 0.96)
+        );
+
+    border-radius: 18px;
+
+    padding: 22px;
+
+    border: 1px solid rgba(205, 187, 145, 0.14);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.22);
+}
+
+
+.post-card h2 {
+    margin-bottom: 18px;
+
+    color: #eee8dc;
+
+    font-size: 1.15rem;
+}
+
+
+.post-details {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    color: #aaa99f;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================================================
+   POST ACTIONS
+========================================================== */
+
+.post-actions {
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.post-actions button {
+    flex: 1;
+
+    padding: 11px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    font-size: 0.88rem;
+
+    font-weight: 600;
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+
+
+.post-actions button:hover {
+    transform: translateY(-1px);
+
+    filter: brightness(1.08);
+}
+
+
+.edit-btn {
+    background: #657b62;
+}
+
+
+.delete-btn {
+    background: #9b5147;
+}
+
+
+/* =========================================================
+   CALENDAR SECTION
+========================================================= */
+
+.calendar-section {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    background: #18201b;
+
+    border: 1px solid rgba(190, 159, 96, 0.35);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+
+/* =========================================================
+   BACKGROUND IMAGE
+========================================================= */
+
+.calendar-section::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(18, 27, 23, 0.84),
+            rgba(18, 27, 23, 0.84)
+        ),
+        url("/calendar-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0.9;
+
+    pointer-events: none;
+}
+
+
+/* Keep calendar above image */
+
+.calendar-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================================================
+   CALENDAR CONTAINER
+========================================================= */
+
+.calendar-container {
+    height: 82vh;
+
+    min-height: 600px;
+
+    position: relative;
+}
+
+
+/* =========================================================
+   MAIN CALENDAR
+========================================================= */
+
+.rbc-calendar {
+    height: 100%;
+
+    color: #eee8d5;
+
+    font-family:
+        "Segoe UI",
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+}
+
+
+/* =========================================================
+   REACT BIG CALENDAR - TOOLBAR
+   Dark vintage theme
+========================================================= */
+
+.rbc-toolbar {
+    margin-bottom: 20px !important;
+    padding: 10px 12px !important;
+
+    border: 1px solid rgba(184, 151, 88, 0.35) !important;
+    border-radius: 14px !important;
+
+    background: rgba(8, 24, 19, 0.82) !important;
+
+    color: #eee6d2 !important;
+}
+
+
+/* ---------------------------------------------------------
+   ALL TOOLBAR BUTTONS
+--------------------------------------------------------- */
+
+.rbc-toolbar .rbc-btn-group button,
+.rbc-toolbar button {
+    padding: 7px 14px !important;
+
+    border: 1px solid rgba(210, 190, 145, 0.4) !important;
+    border-radius: 6px !important;
+
+    background: rgba(25, 40, 33, 0.9) !important;
+
+    color: #eee6d2 !important;
+
+    font-family: inherit !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+
+    opacity: 1 !important;
+
+    text-shadow: none !important;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease !important;
+}
+
+
+/* ---------------------------------------------------------
+   HOVER
+--------------------------------------------------------- */
+
+.rbc-toolbar .rbc-btn-group button:hover,
+.rbc-toolbar button:hover {
+    background: #b89555 !important;
+
+    border-color: #b89555 !important;
+
+    color: #17221d !important;
+
+    opacity: 1 !important;
+}
+
+
+/* ---------------------------------------------------------
+   ACTIVE VIEW
+   (Month / Week / Day)
+--------------------------------------------------------- */
+
+.rbc-toolbar .rbc-btn-group button.rbc-active,
+.rbc-toolbar button.rbc-active {
+    background: #eee6d2 !important;
+
+    border-color: #eee6d2 !important;
+
+    color: #17221d !important;
+
+    opacity: 1 !important;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+
+/* ---------------------------------------------------------
+   ACTIVE + HOVER
+--------------------------------------------------------- */
+
+.rbc-toolbar .rbc-btn-group button.rbc-active:hover,
+.rbc-toolbar button.rbc-active:hover {
+    background: #f5ead1 !important;
+
+    border-color: #f5ead1 !important;
+
+    color: #17221d !important;
+}
+
+
+/* ---------------------------------------------------------
+   DISABLED BUTTONS
+   (Today / Back may be disabled depending on the date)
+--------------------------------------------------------- */
+
+.rbc-toolbar .rbc-btn-group button:disabled,
+.rbc-toolbar button:disabled {
+    background: rgba(25, 40, 33, 0.75) !important;
+
+    border-color: rgba(210, 190, 145, 0.25) !important;
+
+    color: #aeb8ad !important;
+
+    opacity: 1 !important;
+
+    text-shadow: none !important;
+
+    cursor: not-allowed !important;
+}
+
+
+/* ---------------------------------------------------------
+   DISABLED + HOVER
+--------------------------------------------------------- */
+
+.rbc-toolbar .rbc-btn-group button:disabled:hover,
+.rbc-toolbar button:disabled:hover {
+    background: rgba(25, 40, 33, 0.75) !important;
+
+    border-color: rgba(210, 190, 145, 0.25) !important;
+
+    color: #aeb8ad !important;
+
+    opacity: 1 !important;
+}
+
+
+/* ---------------------------------------------------------
+   BUTTON GROUP
+--------------------------------------------------------- */
+
+.rbc-btn-group {
+    display: inline-flex !important;
+}
+
+.rbc-btn-group button {
+    margin: 0 !important;
+}
+
+/* =========================================================
+   MONTH VIEW
+========================================================= */
+
+.rbc-month-view {
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(205, 195, 170, 0.28);
+
+    background: rgba(21, 30, 26, 0.58) !important;
+}
+
+
+/* =========================================================
+   WEEKDAY HEADERS
+========================================================= */
+
+.rbc-header {
+    padding: 9px 5px;
+
+    background: rgba(20, 28, 24, 0.94);
+
+    border-bottom: 1px solid rgba(205, 195, 170, 0.28) !important;
+
+    color: #d8cdb7;
+
+    font-size: 0.74rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.06em;
+}
+
+
+.rbc-header + .rbc-header {
+    border-left: 1px solid rgba(205, 195, 170, 0.22);
+}
+
+
+/* =========================================================
+   MONTH ROWS
+========================================================= */
+
+.rbc-month-row {
+    min-height: 0;
+
+    border-top: 1px solid rgba(205, 195, 170, 0.22) !important;
+
+    background: transparent !important;
+}
+
+
+/* =========================================================
+   DAY CELLS
+========================================================= */
+
+.rbc-day-bg {
+    background: rgba(24, 34, 29, 0.52) !important;
+
+    border-left: 1px solid rgba(205, 195, 170, 0.20) !important;
+
+    transition:
+        background 0.2s ease;
+}
+
+
+.rbc-day-bg:hover {
+    background: rgba(50, 62, 52, 0.68) !important;
+}
+
+
+/* Remove the first column's extra line */
+
+.rbc-day-bg:first-child {
+    border-left: none !important;
+}
+
+
+/* =========================================================
+   OFF-RANGE DAYS
+   Days belonging to previous / next month
+========================================================= */
+
+.rbc-off-range-bg {
+    background: rgba(11, 18, 15, 0.68) !important;
+}
+
+
+.rbc-off-range {
+    color: #6f786f !important;
+}
+
+
+.rbc-off-range .rbc-date-cell {
+    color: #697269 !important;
+}
+
+
+/* =========================================================
+   DATE NUMBERS
+========================================================= */
+
+.rbc-date-cell {
+    padding: 6px 8px;
+
+    color: #d9d2c2;
+
+    font-size: 0.78rem;
+
+    font-weight: 600;
+
+    text-align: right;
+}
+
+
+.rbc-date-cell a {
+    color: inherit !important;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   TODAY
+========================================================= */
+
+.rbc-today {
+    background: rgba(185, 149, 85, 0.13) !important;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(185, 149, 85, 0.35);
+}
+
+
+/* =========================================================
+   SELECTED / FOCUSED DATE
+========================================================= */
+
+.rbc-day-bg.rbc-selected-cell {
+    background: rgba(185, 149, 85, 0.18) !important;
+}
+
+
+/* =========================================================
+   EVENTS
+========================================================= */
+
+.rbc-event {
+    border: none !important;
+
+    border-radius: 6px !important;
+
+    padding: 4px 7px !important;
+
+    background: #71866d !important;
+
+    color: #f4f0e6 !important;
+
+    font-size: 0.72rem;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.15s ease,
+        filter 0.15s ease;
+}
+
+
+.rbc-event:hover {
+    filter: brightness(1.12);
+
+    transform: translateY(-1px);
+}
+
+
+.rbc-event-content {
+    color: #f4f0e6 !important;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   EVENT LABEL / TIME
+========================================================= */
+
+.rbc-event-label {
+    color: #eee8d5 !important;
+
+    font-size: 0.68rem;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   CURRENT TIME INDICATOR
+========================================================= */
+
+.rbc-current-time-indicator {
+    background: #b99555;
+
+    height: 2px;
+
+    box-shadow:
+        0 0 6px rgba(185, 149, 85, 0.5);
+}
+
+
+/* =========================================================
+   DATE ROW
+========================================================= */
+
+.rbc-row-content {
+    z-index: 4;
+}
+
+
+.rbc-row-segment {
+    padding: 2px 4px;
+}
+
+
+/* =========================================================
+   GRID LINES
+========================================================= */
+
+.rbc-day-slot .rbc-time-slot {
+    border-top: 1px solid rgba(205, 195, 170, 0.12);
+}
+
+
+.rbc-time-view {
+    border: 1px solid rgba(205, 195, 170, 0.25);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    background: rgba(21, 30, 26, 0.6);
+}
+
+
+/* =========================================================
+   WEEK / DAY VIEW
+========================================================= */
+
+.rbc-time-header {
+
+    background: rgba(20, 28, 24, 0.9);
+
+    border-bottom: 1px solid rgba(205, 195, 170, 0.25);
+}
+
+
+.rbc-time-content {
+    border-top: 1px solid rgba(205, 195, 170, 0.2);
+
+    background: rgba(21, 30, 26, 0.55);
+}
+
+
+.rbc-timeslot-group {
+    border-bottom: 1px solid rgba(205, 195, 170, 0.15);
+}
+
+
+.rbc-time-slot {
+    color: #aaa494;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .calendar-container {
+        height: 70vh;
+
+        min-height: 500px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .calendar-section {
+        padding: 12px;
+    }
+
+    .calendar-container {
+        height: 65vh;
+
+        min-height: 450px;
+    }
+
+    .rbc-toolbar {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 8px;
+    }
+
+    .rbc-toolbar-label {
+        order: -1;
+
+        text-align: center;
+    }
+
+    .rbc-toolbar button {
+        font-size: 0.7rem;
+
+        padding: 6px 8px;
+    }
+
+    .rbc-header {
+        font-size: 0.62rem;
+    }
+
+    .rbc-date-cell {
+        font-size: 0.68rem;
+
+        padding: 4px;
+    }
+
+    .rbc-event {
+        font-size: 0.62rem;
+
+        padding: 3px 4px !important;
+    }
+}
+
+/* ==========================================================
+   CURRENT TIME INDICATOR
+========================================================== */
+
+.rbc-current-time-indicator {
+    background-color: #c4a66d;
+}
+
+
+/* ==========================================================
+   SHOW MORE
+========================================================== */
+
+.rbc-show-more {
+    color: #c4a66d;
+
+    font-weight: 700;
+
+    font-size: 0.72rem;
+}
+
+
+/* ==========================================================
+   POST DETAILS CARD
+========================================================== */
+
+.post-details {
+    background: transparent;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 1100px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+
+    .form-section {
+        position: static;
+
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        align-items: start;
+    }
+
+
+    .calendar-container {
+        height: 70vh;
+
+        min-height: 560px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .home {
+        padding: 20px;
+    }
+
+
+    .home h1 {
+        font-size: 1.8rem;
+
+        margin-bottom: 24px;
+    }
+
+
+    .form-section {
+        grid-template-columns: 1fr;
+    }
+
+
+    .calendar-section {
+        padding: 14px;
+    }
+
+
+    .calendar-container {
+        height: 65vh;
+
+        min-height: 500px;
+    }
+
+
+    .rbc-toolbar {
+        flex-wrap: wrap;
+
+        gap: 8px;
+    }
+
+
+    .rbc-toolbar-label {
+        order: -1;
+
+        width: 100%;
+
+        text-align: center;
+
+        margin-bottom: 4px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .home {
+        padding: 14px;
+    }
+
+
+    .post-form {
+        padding: 18px;
+    }
+
+
+    .calendar-section {
+        padding: 10px;
+    }
+
+
+    .calendar-container {
+        height: 60vh;
+
+        min-height: 440px;
+    }
+
+
+    .rbc-toolbar button {
+        padding: 6px 8px;
+
+        font-size: 0.72rem;
+    }
+
+
+    .rbc-header {
+        font-size: 0.65rem;
+    }
+
+
+    .rbc-date-cell {
+        font-size: 0.68rem;
+
+        padding: 4px;
+    }
+
+
+    .rbc-event {
+        font-size: 0.62rem !important;
+
+        padding: 3px 4px !important;
+    }
+
+}
